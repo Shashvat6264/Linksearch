@@ -1,0 +1,47 @@
+{
+  "name": "material-ui-starter",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@material-ui/core": "^3.9.2",
+    "@material-ui/icons": "^3.0.2",
+    "@material-ui/lab": "^3.0.0-alpha.30",
+    "@material-ui/styles": "^3.0.0-alpha.10",
+    "@mui/material": "^5.11.1",
+    "algoliasearch": "^4.14.3",
+    "instantsearch.css": "^7.4.5",
+    "instantsearch.js": "^4.49.2",
+    "local-storage": "^1.4.2",
+    "metadata-scraper": "^0.2.61",
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
+    "react-instantsearch-dom": "^6.38.1",
+    "react-redux": "^6.0.1",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "2.1.8",
+    "redux": "^4.0.1",
+    "redux-promise-middleware": "^6.1.0",
+    "redux-thunk": "^2.3.0",
+    "typesense-instantsearch-adapter": "^2.4.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "typesenseServer": "docker run -i -p 8108:8108 -v/tmp/typesense-server-data-1c/:/data typesense/typesense:0.23.1 --data-dir /data --api-key=xyz --listen-port 8108 --enable-cors",
+    "populateTypesenseIndex": "node populateTypesenseIndex.js",
+    "clearcache": "npm cache clean && rm ./data/cache.json"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
